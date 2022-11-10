@@ -29,6 +29,6 @@ if(checkEta<18){
     let sconto =percentage(prezzoTotaleBiglietto,sconto20Percento).toFixed(2);
     document.getElementById("biglietto").innerHTML=(prezzoTotaleBiglietto-sconto).toFixed(2);
 }else{
-    document.getElementById("biglietto").innerHTML= prezzoTotaleBiglietto;
+    document.getElementById("biglietto").innerHTML= prezzoTotaleBiglietto.toFixed(2);
 }
 }
