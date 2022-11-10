@@ -21,6 +21,7 @@ function percentage(num, per)
 {
   return (num/100)*per;
 }
+
 if(eta<18){
     let sconto =percentage(prezzoTotaleBiglietto,sconto20Percento).toFixed(2);
     document.getElementById("costo").innerHTML=(prezzoTotaleBiglietto-sconto).toFixed(2);
