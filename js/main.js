@@ -1,33 +1,34 @@
+// da non modificare
 let prezzoBiglietto=0.21;
 
 let sconto20Percento=20;
 
 let sconto40Percento=40;
+//
 
-let kmDaPercorrere=prompt("kilometri da percorrere");
-kmDaPercorrere=parseFloat(kmDaPercorrere);
+let kmDaPercorrere=document.getElementById("kilometri");
+let eta=document.getElementById("età");
 
-let prezzoTotaleBiglietto=prezzoBiglietto * kmDaPercorrere;
-prezzoTotaleBiglietto= parseFloat(prezzoTotaleBiglietto);
-
-console.log(prezzoTotaleBiglietto);
-
-let eta=(prompt("inserisci la tua età"));
-
-
-
-
+document.getElementById("bottone").onclick = etaCheck;
+function check(){
+    document.getElementById("biglietto").innerHTML=kmDaPercorrere.value;
+    console.log(kmDaPercorrere);
+}
 function percentage(num, per)
 {
   return (num/100)*per;
 }
-
-if(eta<18){
+function etaCheck(){
+    let prezzoTotaleBiglietto=prezzoBiglietto * kmDaPercorrere.value;
+    prezzoTotaleBiglietto= parseFloat(prezzoTotaleBiglietto);
+    let checkEta = eta.value;
+if(checkEta<18){
     let sconto =percentage(prezzoTotaleBiglietto,sconto20Percento).toFixed(2);
-    document.getElementById("costo").innerHTML=(prezzoTotaleBiglietto-sconto).toFixed(2);
-}else if(eta>65){
+    document.getElementById("biglietto").innerHTML=(prezzoTotaleBiglietto-sconto).toFixed(2);
+}else if(checkEta>65){
     let sconto =percentage(prezzoTotaleBiglietto,sconto20Percento).toFixed(2);
-    document.getElementById("costo").innerHTML=(prezzoTotaleBiglietto-sconto).toFixed(2);
+    document.getElementById("biglietto").innerHTML=(prezzoTotaleBiglietto-sconto).toFixed(2);
 }else{
-    document.getElementById("costo").innerHTML= prezzoTotaleBiglietto;
+    document.getElementById("biglietto").innerHTML= prezzoTotaleBiglietto;
+}
 }
