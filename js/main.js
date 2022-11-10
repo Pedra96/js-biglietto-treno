@@ -30,11 +30,11 @@ function etaCheck(){
     let checkEta = eta.value;
 if(checkEta<18){
     let sconto =percentage(prezzoTotaleBiglietto,sconto20Percento).toFixed(2);
-    document.getElementById("Prezzobiglietto").innerHTML="Prezzo: "+(prezzoTotaleBiglietto-sconto).toFixed(2);
+    document.getElementById("Prezzobiglietto").innerHTML="Prezzo: "+(prezzoTotaleBiglietto-sconto).toFixed(2)+"€";
 }else if(checkEta>=65){
     let sconto =percentage(prezzoTotaleBiglietto,sconto20Percento).toFixed(2);
-    document.getElementById("Prezzobiglietto").innerHTML="Prezzo: "+(prezzoTotaleBiglietto-sconto).toFixed(2);
+    document.getElementById("Prezzobiglietto").innerHTML="Prezzo: "+(prezzoTotaleBiglietto-sconto).toFixed(2)+"€";
 }else{
-    document.getElementById("Prezzobiglietto").innerHTML="Prezzo: "+ prezzoTotaleBiglietto.toFixed(2);
+    document.getElementById("Prezzobiglietto").innerHTML="Prezzo: "+ prezzoTotaleBiglietto.toFixed(2)+"€";
 }
 }
